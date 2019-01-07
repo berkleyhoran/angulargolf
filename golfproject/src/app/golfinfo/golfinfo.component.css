@@ -1,0 +1,20 @@
+  mat-card{
+    margin:10px 0px 10px 0px;
+  }
+  mat-card-content {
+      
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  mat-radio-group {
+    display: flex;
+    flex-flow:wrap;
+  }
+
+  .scorebox{
+    display:flex;
+    
+  }

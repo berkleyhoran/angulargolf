@@ -1,0 +1,21 @@
+<div class="golfcard" >
+  <div class="hole"  *ngFor="let hole of numholes">
+
+    <mat-card>
+      <mat-card-title>{{"Hole " + hole}}</mat-card-title>
+      <mat-card-content>
+
+          <section *ngFor="let player of numplayers">
+            <label>{{info[player - 1]?.name}} :</label>
+            <mat-form-field>
+              <div attr.id="{{hole}}">
+                <input type="number" id={{player}} matInput placeholder="strokes" (change)="changescore($event)">
+              </div>
+            </mat-form-field>
+          </section>
+
+      </mat-card-content>
+    </mat-card>
+    
+  </div>
+</div>

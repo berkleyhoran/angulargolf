@@ -1,0 +1,28 @@
+<mat-card>
+  
+  <mat-card-content>
+  <mat-card-title>Info</mat-card-title>
+
+      <!-- <section>
+        <mat-checkbox>Full-time employee</mat-checkbox>
+      </section> -->
+
+      <section>
+        <mat-form-field>
+          <mat-select placeholder="Course">
+            <mat-option value="English">Spanish Oaks</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </section>
+
+      <button mat-raised-button color="primary">Start Game</button>
+
+  </mat-card-content>
+
+    <div class="scorebox"  *ngFor="let player of numplayers">
+        <section>
+          <label>{{info[player - 1]?.name}} :</label>
+        </section>
+    </div>
+  
+</mat-card>
