@@ -12,7 +12,7 @@ export class GolfCardComponent implements OnInit {
   info;
 
   model = new Names(
-    "player",
+    "",
     1
   );
   

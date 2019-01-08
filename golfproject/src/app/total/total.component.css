@@ -1,7 +1,7 @@
 mat-card {
     height:350px;
-    margin:10px;
-    width:121.5%;
+    margin:10px 10px 10px 10px;
+    width:578px;
   }
   
   section {
@@ -16,4 +16,19 @@ mat-card {
 
 p{
     margin: 20px;
+}
+
+@media only screen and (max-width: 939px) {
+
+    mat-card{
+        margin:0px 10px 10px 10px;
+    }
+
+}
+@media only screen and (max-width: 1249px) {
+
+    mat-card{
+        width:268px;
+    }
+
 }

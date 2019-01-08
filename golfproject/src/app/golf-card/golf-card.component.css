@@ -1,16 +1,16 @@
 mat-card {
     margin: 10px;
+    height:350px;
   }
   
   section {
     margin-bottom: 20px;
+    width:268px;
   }
   
   mat-radio-group {
     display: flex;
     flex-direction: column;
+    margin-bottom:100px;
   }
 
-  button{
-    margin-top:36px;
-  }
