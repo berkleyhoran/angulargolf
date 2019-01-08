@@ -10,8 +10,10 @@
 
       <section>
         <mat-form-field>
-          <mat-select matSelect placeholder="Course" required name="course" [(ngModel)]="model.course">
-            <mat-option value="spanish">Spanish Oaks</mat-option>
+          <mat-select  matSelect placeholder="Course" required name="course" [(ngModel)]="model.course">
+            <mat-option value={{availablecourses[0]}}>{{golf$.courses[0].name}}</mat-option>
+            <mat-option>{{golf$.courses[1].name}}</mat-option>
+            <mat-option>{{golf$.courses[2].name}}</mat-option>
           </mat-select>
         </mat-form-field>
       </section>

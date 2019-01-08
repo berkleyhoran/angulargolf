@@ -3,6 +3,7 @@ import {info} from '../information';
 import {numplayers} from '../information';
 import {currentsettings} from '../information';
 import {Details} from '../details';
+import { GolfserviceService } from '../golfservice.service';
 
 @Component({
   selector: 'app-golfinfo',
@@ -11,6 +12,12 @@ import {Details} from '../details';
 })
 export class GolfinfoComponent implements OnInit {
 
+
+  public golf$: any;
+
+
+  availablecourses;
+  res;
   info;
   numplayers;
 
@@ -19,17 +26,19 @@ export class GolfinfoComponent implements OnInit {
     ""
   );
 
-  constructor() { }
+  constructor(private golfservice: GolfserviceService) { }
 
   ngOnInit() {
     this.info = info;
     this.numplayers = numplayers;
+    this.golfservice.getGolf().subscribe(res => this.golf$ = res); 
+    this.golf$.courses = this.availablecourses;
+    console.log(this.availablecourses)
   }
 
   submitdetails(){
     currentsettings.course = this.model.course;
     currentsettings.tee = this.model.tee;
-    console.log(currentsettings)
   }
 
 }

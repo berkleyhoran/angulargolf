@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GolfCardComponent } from './golf-card/golf-card.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import {
   MatButtonModule,
   MatCardModule,
@@ -17,7 +18,6 @@ import {
 } from '@angular/material';
 import { GolfinfoComponent } from './golfinfo/golfinfo.component';
 import { ScoreComponent } from './score/score.component';
-import {info} from './information';
 import { TotalComponent } from './total/total.component';
 
 @NgModule({
@@ -39,7 +39,8 @@ import { TotalComponent } from './total/total.component';
     MatCheckboxModule,
     MatRadioModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

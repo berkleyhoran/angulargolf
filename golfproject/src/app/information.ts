@@ -1,5 +1,8 @@
 import { Player } from './player';
 import { Details } from './details';
+import { GolfserviceService } from './golfservice.service';
+
+export var api = [];
 
 export var info = [];
 
