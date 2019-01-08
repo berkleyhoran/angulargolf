@@ -5,7 +5,7 @@
       <mat-card-title>{{"Hole " + hole}}</mat-card-title>
       <mat-card-content>
 
-          <section *ngFor="let player of numplayers">
+          <section *ngFor="let player of numplayers" [style.display]="info[player - 1].isPlaying ? 'block' : 'none'">
             <label>{{info[player - 1]?.name}} :</label>
             <mat-form-field>
               <div attr.id="{{hole}}">
