@@ -16,7 +16,7 @@
 
       <section>
         <label>Player</label>
-        <mat-radio-group id="playerselect" required name="playerselect" [(ngModel)]="model.playernum">
+        <mat-radio-group id="playerselect" required name="playerselect" [(ngModel)]="model.playernum" required>
           <mat-radio-button value="1">1</mat-radio-button>
           <mat-radio-button value="2">2</mat-radio-button>
           <mat-radio-button value="3">3</mat-radio-button>
@@ -24,7 +24,7 @@
         </mat-radio-group>
       
 
-      <button mat-raised-button color="primary" (click)="submit($event)" [disabled]="empForm.invalid">Add player</button>
+      <button mat-raised-button color="primary" [disabled]="empForm.invalid">Add player</button>
 
       </section>
 

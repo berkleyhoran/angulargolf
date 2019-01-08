@@ -2,6 +2,7 @@
   
   <mat-card-content>
   <mat-card-title>Info</mat-card-title>
+  <form (ngSubmit)="submitdetails()" #empForm="ngForm">
 
       <!-- <section>
         <mat-checkbox>Full-time employee</mat-checkbox>
@@ -9,21 +10,23 @@
 
       <section>
         <mat-form-field>
-          <mat-select placeholder="Course">
-            <mat-option value="Spanish Oaks">Spanish Oaks</mat-option>
+          <mat-select matSelect placeholder="Course" required name="course" [(ngModel)]="model.course">
+            <mat-option value="spanish">Spanish Oaks</mat-option>
           </mat-select>
         </mat-form-field>
       </section>
 
       <section>
         <mat-form-field>
-          <mat-select placeholder="Tee">
-            <mat-option value="English">Womens</mat-option>
+          <mat-select matSelect placeholder="Tee" required name="tee" [(ngModel)]="model.tee">
+            <mat-option value="womens">Womens</mat-option>
           </mat-select>
         </mat-form-field>
       </section>
 
-      <button mat-raised-button color="primary">Start Game</button>
+      <button mat-raised-button color="primary" [disabled]="empForm.invalid">Start Game</button>
+
+    </form>
 
   </mat-card-content>
   
