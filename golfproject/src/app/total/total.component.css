@@ -1,0 +1,19 @@
+mat-card {
+    height:350px;
+    margin:10px;
+    width:121.5%;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+.scores{
+    display:flex;
+    flex-flow:row;
+    justify-content: space-between;
+}
+
+p{
+    margin: 20px;
+}

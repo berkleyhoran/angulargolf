@@ -14,6 +14,11 @@ export class ScoreComponent implements OnInit {
   numholes;
   numplayers;
 
+  // target;
+  // id;
+  // hole;
+  // value;
+
   constructor() { }
 
   ngOnInit() {
@@ -28,17 +33,31 @@ export class ScoreComponent implements OnInit {
 
   changescore(event){
     var target = event.target || event.srcElement;
-    let id = target.id;
-    let hole = target.parentNode.id;
-    let value = target.value;
+    var id = target.id;
+    var hole = target.parentNode.id;
+    var value = parseInt(target.value, 10);
     console.log(id);
     console.log(hole);
     console.log(value);
 
-    info[id].hole[hole - 1] = value;
+    info[id - 1].hole[hole - 1] = value;
 
-    console.log(info[id]);
-    
+    console.log(info[id - 1]);
+
+    this.calculatescore(id);
+
+  }
+
+  calculatescore(i){
+
+      let total = 0;
+
+    for (let d = 0; d < info[i - 1].hole.length; d++) {
+      let current = info[i - 1].hole[d]
+       total += current;
+    }
+      console.log(total)
+      info[i - 1].score = total;
 
   }
 

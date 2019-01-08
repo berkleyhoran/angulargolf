@@ -18,13 +18,15 @@ import {
 import { GolfinfoComponent } from './golfinfo/golfinfo.component';
 import { ScoreComponent } from './score/score.component';
 import {info} from './information';
+import { TotalComponent } from './total/total.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GolfCardComponent,
     GolfinfoComponent,
-    ScoreComponent
+    ScoreComponent,
+    TotalComponent
   ],
   imports: [
     BrowserModule,
@@ -42,4 +44,6 @@ import {info} from './information';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

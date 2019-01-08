@@ -10,7 +10,15 @@
       <section>
         <mat-form-field>
           <mat-select placeholder="Course">
-            <mat-option value="English">Spanish Oaks</mat-option>
+            <mat-option value="Spanish Oaks">Spanish Oaks</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </section>
+
+      <section>
+        <mat-form-field>
+          <mat-select placeholder="Tee">
+            <mat-option value="English">Womens</mat-option>
           </mat-select>
         </mat-form-field>
       </section>
@@ -18,11 +26,5 @@
       <button mat-raised-button color="primary">Start Game</button>
 
   </mat-card-content>
-
-    <div class="scorebox"  *ngFor="let player of numplayers">
-        <section>
-          <label>{{info[player - 1]?.name}} :</label>
-        </section>
-    </div>
   
 </mat-card>

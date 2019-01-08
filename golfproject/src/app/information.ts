@@ -9,22 +9,26 @@ export var numplayers = [1,2,3,4];
 var player1 = new Player(
     'Player',
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    true
+    false,
+    0
   )
   var player2 = new Player(
     'Player2',
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    false
+    false,
+    0
   )
   var player3 = new Player(
     'Player3',
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    false
+    false,
+    0
   )
   var player4 = new Player(
     'Player4',
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    false
+    false,
+    0
   )
 
   info.push(player1)

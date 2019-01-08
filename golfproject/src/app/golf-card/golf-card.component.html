@@ -1,10 +1,12 @@
 <mat-card>
   <mat-card-title>Player Input</mat-card-title>
   <mat-card-content>
-    <form>
+    <form (ngSubmit)="submit()">
       <section>
         <mat-form-field>
-        <input matInput placeholder="Name">
+        <input id="name" matInput placeholder="Name" required
+            name="firstName"
+            [(ngModel)]="model.name">
       </mat-form-field>
       </section>
 
@@ -12,8 +14,21 @@
         <mat-checkbox>Full-time employee</mat-checkbox>
       </section> -->
 
-      <button mat-raised-button color="primary">Add player</button>
+      <section>
+        <label>Player</label>
+        <mat-radio-group id="playerselect" required name="playerselect" [(ngModel)]="model.playernum">
+          <mat-radio-button value="1">1</mat-radio-button>
+          <mat-radio-button value="2">2</mat-radio-button>
+          <mat-radio-button value="3">3</mat-radio-button>
+          <mat-radio-button value="4">4</mat-radio-button>
+        </mat-radio-group>
+      
+
+      <button mat-raised-button color="primary" (click)="submit($event)">Add player</button>
+
+      </section>
 
     </form>
   </mat-card-content>
+
 </mat-card>
