@@ -10,10 +10,12 @@
 
       <section>
         <mat-form-field>
-          <mat-select  matSelect placeholder="Course" required name="course" [(ngModel)]="model.course">
-            <mat-option value={{availablecourses[0]}}>{{golf$.courses[0].name}}</mat-option>
-            <mat-option>{{golf$.courses[1].name}}</mat-option>
-            <mat-option>{{golf$.courses[2].name}}</mat-option>
+          <mat-select  matSelect placeholder="Course" required name="course" [(ngModel)]="model.course" (selectionChange)="changedhole()">
+
+            <ng-container *ngIf="info">
+              <mat-option *ngFor="let course of info.courses" value={{course.id}} >{{course.name}}</mat-option>
+            </ng-container>
+
           </mat-select>
         </mat-form-field>
       </section>
@@ -21,7 +23,9 @@
       <section>
         <mat-form-field>
           <mat-select matSelect placeholder="Tee" required name="tee" [(ngModel)]="model.tee">
-            <mat-option value="womens">Womens</mat-option>
+            <ng-container *ngIf="courseinfo">
+                <mat-option *ngFor="let boxes of courseinfo.data.holes[0].teeBoxes" value={{boxes.teeTypeId}} >{{boxes.teeType}}</mat-option>
+              </ng-container>
           </mat-select>
         </mat-form-field>
       </section>

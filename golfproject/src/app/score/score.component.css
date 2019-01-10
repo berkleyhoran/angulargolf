@@ -19,6 +19,12 @@ mat-card {
 
    p {
       margin:7px;
+      font-size: 12px;
+
+  }
+
+  #left{
+    margin-left:30px;
   }
 
   .hole{

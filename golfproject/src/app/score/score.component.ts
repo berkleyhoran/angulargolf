@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {info} from '../information';
 import {numholes} from '../information';
 import {numplayers} from '../information';
+import {holeinformation} from '../information';
 
 @Component({
   selector: 'app-score',
@@ -13,6 +14,7 @@ export class ScoreComponent implements OnInit {
   info;
   numholes;
   numplayers;
+  holeinformation;
 
   // target;
   // id;
@@ -25,9 +27,14 @@ export class ScoreComponent implements OnInit {
     this.info = info;
     this.numholes = numholes;
     this.numplayers = numplayers;
+    this.holeinformation = holeinformation;
     console.log(info[0].name)
     console.log(numholes)
     
+    
+  }
+
+  getinfo(){
     
   }
 

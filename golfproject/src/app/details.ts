@@ -1,6 +1,6 @@
 export class Details {
     constructor(
-        public course : string,
-        public tee : string
+        public course : number,
+        public tee : number
     ){}
 }

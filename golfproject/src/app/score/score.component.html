@@ -4,8 +4,9 @@
     <mat-card>
       <section class="data">
         <mat-card-title>{{"Hole " + hole}}</mat-card-title>
-        <p>par : </p>
-        <p>yards : </p>
+        <p id="left">par : {{holeinformation.par[hole - 1]}}</p>
+        <p>yards : {{holeinformation.yards[hole - 1]}}</p>
+        <p>hcp : {{holeinformation.handi[hole - 1]}}</p>
       </section>
       <mat-card-content>
 
