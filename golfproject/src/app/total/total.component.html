@@ -2,10 +2,10 @@
   <mat-card-title>Scores</mat-card-title>
   <mat-card-content>
     <div class="scores">
-      <span [style.visibility]="info[0].isPlaying ? 'visible' : 'hidden'"><p>{{info[0].name}}</p><p>{{info[0].score}}</p></span>
-      <span [style.visibility]="info[1].isPlaying ? 'visible' : 'hidden'"><p>{{info[1].name}}</p><p>{{info[1].score}}</p></span>
-      <span [style.visibility]="info[2].isPlaying ? 'visible' : 'hidden'"><p>{{info[2].name}}</p><p>{{info[2].score}}</p></span>
-      <span [style.visibility]="info[3].isPlaying ? 'visible' : 'hidden'"><p>{{info[3].name}}</p><p>{{info[3].score}}</p></span>
+      <span [style.visibility]="info[0].isPlaying ? 'visible' : 'hidden'"><p>{{info[0].name | namefixer:1}}</p><p>{{info[0].score}}</p><p>{{info[0].score - holeinfo.totalpar}}</p></span>
+      <span [style.visibility]="info[1].isPlaying ? 'visible' : 'hidden'"><p>{{info[1].name | namefixer:2}}</p><p>{{info[1].score}}</p><p>{{info[1].score - holeinfo.totalpar}}</p></span>
+      <span [style.visibility]="info[2].isPlaying ? 'visible' : 'hidden'"><p>{{info[2].name | namefixer:3}}</p><p>{{info[2].score}}</p><p>{{info[2].score - holeinfo.totalpar}}</p></span>
+      <span [style.visibility]="info[3].isPlaying ? 'visible' : 'hidden'"><p>{{info[3].name | namefixer:4}}</p><p>{{info[3].score}}</p><p>{{info[3].score - holeinfo.totalpar}}</p></span>
     </div>
   </mat-card-content>
 </mat-card>

@@ -68,12 +68,16 @@ export class GolfinfoComponent implements OnInit {
   fillinfo(){
 
       let ref = this.courseinfo.data.holes;
+      let totalpar = 0;
 
       for (let h = 0; h < ref.length; h++) {
         holeinformation.yards[h] = ref[h].teeBoxes[parseInt(currentsettings.tee, 10) - 1].yards;
         holeinformation.handi[h] = ref[h].teeBoxes[parseInt(currentsettings.tee, 10) - 1].hcp;
         holeinformation.par[h] = ref[h].teeBoxes[parseInt(currentsettings.tee, 10) - 1].par;
+        totalpar += holeinformation.par[h];
+        
       }
+      holeinformation.totalpar = totalpar;
       console.log(holeinformation)
 
   }

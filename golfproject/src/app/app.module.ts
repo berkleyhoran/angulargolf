@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GolfCardComponent } from './golf-card/golf-card.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { namefixer } from './numberpipe';
 import {
   MatButtonModule,
   MatCardModule,
@@ -26,7 +27,8 @@ import { TotalComponent } from './total/total.component';
     GolfCardComponent,
     GolfinfoComponent,
     ScoreComponent,
-    TotalComponent
+    TotalComponent,
+    namefixer
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,7 @@ import { TotalComponent } from './total/total.component';
     MatRadioModule,
     MatSelectModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

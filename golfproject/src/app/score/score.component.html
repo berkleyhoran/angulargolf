@@ -11,7 +11,7 @@
       <mat-card-content>
 
           <section *ngFor="let player of numplayers" [style.display]="info[player - 1].isPlaying ? 'block' : 'none'">
-            <label>{{info[player - 1]?.name}} :  </label>
+            <label>{{info[player - 1]?.name | namefixer:player}} :  </label>
             <mat-form-field>
               <div attr.id="{{hole}}">
                 <input type="number" id={{player}} matInput placeholder="strokes" (change)="changescore($event)">

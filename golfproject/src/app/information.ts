@@ -20,7 +20,8 @@ export var currentsettings = new Details(
 export var holeinformation = new Holeinfo(
   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+  0
 )
 
 var player1 = new Player(
