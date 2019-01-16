@@ -20,6 +20,8 @@ import {
 import { GolfinfoComponent } from './golfinfo/golfinfo.component';
 import { ScoreComponent } from './score/score.component';
 import { TotalComponent } from './total/total.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { WrappingComponent } from './wrapping/wrapping.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { TotalComponent } from './total/total.component';
     GolfinfoComponent,
     ScoreComponent,
     TotalComponent,
-    namefixer
+    namefixer,
+    WelcomeComponent,
+    WrappingComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +47,7 @@ import { TotalComponent } from './total/total.component';
     MatSelectModule,
     MatButtonModule,
     HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

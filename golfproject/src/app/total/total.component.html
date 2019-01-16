@@ -7,5 +7,6 @@
       <span [style.visibility]="info[2].isPlaying ? 'visible' : 'hidden'"><p>{{info[2].name | namefixer:3}}</p><p>{{info[2].score}}</p><p>{{info[2].score - holeinfo.totalpar}}</p></span>
       <span [style.visibility]="info[3].isPlaying ? 'visible' : 'hidden'"><p>{{info[3].name | namefixer:4}}</p><p>{{info[3].score}}</p><p>{{info[3].score - holeinfo.totalpar}}</p></span>
     </div>
+    <h1>{{thebest[0]}} is winning</h1>
   </mat-card-content>
 </mat-card>

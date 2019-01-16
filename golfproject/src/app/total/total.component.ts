@@ -4,6 +4,9 @@ import {numholes} from '../information';
 import {numplayers} from '../information';
 import {holeinformation} from '../information';
 import { namefixer } from '../numberpipe';
+import { winner } from '../information';
+import { thebest } from '../information';
+import { scorehidden } from '../information';
 
 @Component({
   selector: 'app-total',
@@ -16,6 +19,11 @@ export class TotalComponent implements OnInit {
   numholes;
   numplayers;
   holeinfo;
+  thebest;
+  scorehidden;
+
+  calculatescore : winner;
+  
 
   constructor() { }
 
@@ -24,6 +32,10 @@ export class TotalComponent implements OnInit {
     this.info = info;
     this.numholes = numholes;
     this.numplayers = numplayers;
+    this.thebest = thebest;
+    this.scorehidden = scorehidden;
+
+    
     
     
   }

@@ -6,15 +6,24 @@ import { Holeinfo } from './holeinfo';
 
 //api.push(GolfserviceService.golf$.courses)
 
+export var thebest = [];
+
 export var info = [];
+
+export var scorehidden = true;
 
 export var numholes = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
 
 export var numplayers = [1,2,3,4];
 
+export interface winner {
+  thebest: string;
+  highestscore: number;
+}
+
 export var currentsettings = new Details(
   0,
-  ""
+  0
 )
 
 export var holeinformation = new Holeinfo(

@@ -1,0 +1,15 @@
+h1{
+    color: white;
+    font-size:100px;
+}
+.wrap{
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    flex-flow:column;
+    width:100%;
+}
+button{
+    display:flex;
+    justify-content: center;
+}
